@@ -1,0 +1,607 @@
+/* Index for styles.css: */
+
+/*
+1. Body
+2. Navigation Bar
+3. Homepage Background
+4. About Section
+5. Team Section
+6. Courses Section
+7. Resources Section
+8. Footer Section
+9. Website Fade-In Section */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* 1. Body
+==============================*/
+
+body {
+    margin: 0;
+    /* Removes default margins */
+    padding: 0;
+    /* Removes default padding */
+    font-family: Arial, sans-serif;
+    /* Sets the font family */
+    overflow-x: hidden;
+    /* Prevents horizontal scrolling */
+}
+
+body,
+html {
+    width: 100%;
+    /* Sets the width to 100% of the viewport */
+    height: 100%;
+    /* Sets the height to 100% of the viewport */
+}
+
+/* Paragraph Styling */
+p {
+    font-family: "Didact Gothic", sans-serif;
+}
+
+/* 2. Navigation Bar
+==============================*/
+
+#nav-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background-color: #f7f7f7;
+    color: #333;
+    padding: 15px;
+    z-index: 2;
+    border-bottom: 2px solid #d2b356;
+}
+
+#nav-logo {
+    object-fit: contain;
+    max-height: 30px;
+    max-width: 30px;
+}
+
+#nav-links {
+    justify-content: center;
+    width: 100%;
+}
+
+
+#nav-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+#nav-list li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+#nav-list a {
+    text-decoration: none;
+    color: #333;
+}
+
+#social-media-icons {
+    display: flex;
+    gap: 10px;
+    margin-right: 40px;
+}
+
+.social{
+    max-width: 20px;
+    height: auto;
+}
+
+
+
+
+
+
+/* 3. Homepage Background 
+==============================*/
+
+.parallax {
+    /* The image used */
+    background-image: url("./assets/images/background/chris-herath-FcvIlm3I2Ts-unsplash.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Parallax Overlay */
+.parallax::before {
+    content: "";
+    /* Required for the pseudo-element to work */
+    position: absolute;
+    /* Positions the pseudo-element relative to the nearest positioned ancestor */
+    top: 0;
+    /* Starts from the top */
+    left: 50px;
+    /* Starts from the left */
+    width: 400px;
+    /* Takes up the full width */
+    height: 100px;
+    /* Takes up the full height */
+    background-image: url("./assets/images/logo/nAvidexus\ PNG.png-HD.png");
+    /* Replace with the path to your overlay image */
+    background-size: contain;
+    /* Scales the image to fit within the content area */
+    background-position: center left;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    opacity: 1;
+    /* Adjust as needed */
+    z-index: 1;
+    /* Ensures the image is on top of the background */
+    top: 200px;
+}
+
+.parallax .overlay {
+    /* ...other styles... */
+    background-size: 50%;
+    /* Reduces the size of the overlay image to 50% of its original size */
+}
+
+/* 4. About Section
+============================== */
+
+#about-us {
+    background-color: white;
+    /* Sets the background color */
+
+    border-top: 2px solid #d2b356;
+    /* Adds a top border to the section */
+    padding-left: 50px;
+    /* Adds a 50px padding from the left side of the screen */
+}
+
+.about-us-header {
+    
+    /* Makes the text bold */
+    color: black;
+    /* Sets the text color */
+    font-size: 40px;
+    /* Sets the font size */
+    margin-bottom: 35px;
+    border-bottom: 1px solid black;
+    margin-left: 50px;
+    margin-right: 100px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-background {
+    background-color: white;
+    flex: 1;
+    /* Reduce the flex value to leave room for the text */
+    padding-right: 20px;
+}
+
+.about-us-text {
+    font-size: 18px;
+    /* Sets the font size */
+    line-height: 1.5;
+    /* Sets the line height */
+    color: #666;
+    /* Sets the text color */
+    max-width: 800px;
+    /* Sets the maximum width */
+    padding-top: 5px;
+    /* Adds some space above the text */
+    margin-bottom: 20px;
+    /* Adds some space below the text */
+    padding-left: 50px;
+    /* Adds a 50px padding from the left side of the screen */
+}
+
+.about-picture img {
+    flex: 1;
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 600px) {
+    .content {
+       flex-direction: column;
+    }
+    .about-background {
+       padding-right: 0;
+    }
+    .about-us-text {
+       font-size: 16px;
+       padding-left: 20px;
+    }
+    .about-picture img {
+       max-width: 100%;
+       height: auto;
+    }
+   }
+   
+
+/* 5. Team Section
+============================== */
+
+#team {
+    background-color: #f7f7f7;
+    /* Light gray background */
+    padding: 50px 0;
+    /* Vertical padding */
+    text-align: center;
+    /* Center the text */
+}
+
+.team-header {
+    font-size: 40px;
+    /* Large font size */
+    color: #333;
+    /* Dark gray text */
+    margin-bottom: 50px;
+    /* Space below the header */
+}
+
+.profile-card {
+    display: inline-block;
+    /* Allows the card to sit side by side with other cards */
+    background-color: #fff;
+    /* White background */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* Shadow effect */
+    transition: 0.3s;
+    /* Smooth transition */
+    width: 50%;
+    /* Width of the card */
+    margin: 10px;
+    /* Space around the card */
+    border: 2px solid transparent;
+    /* Transparent border */
+    padding: 20px;
+}
+
+.profile-card:hover {
+    border: 2px solid #d2b356;
+    /* Golden border on hover */
+}
+
+.profile-pic {
+    border-radius: 50%;
+    /* Circle shape */
+    width: 250px;
+    /* Full width */
+    height: 250px;
+    /* Auto height */
+    position: relative;
+    top: 20px;
+}
+
+.profile-name {
+    font-size: 2em;
+    /* Medium font size */
+    color: #333;
+    /* Dark gray text */
+    margin: 50px 0 20px 0;
+    /* Space above the name, no space below */
+}
+
+.profile-role {
+    font-size: 1.5em;
+    /* Medium font size */
+    color: #333;
+    /* Dark gray text */
+    margin: 10px 0;
+    /* Space above and below the role */
+    font-style: italic;
+}
+
+.profile-bio {
+    font-size: 18px;
+    /* Small font size */
+    color: #666;
+    /* Gray text */
+    line-height: 1.5;
+    /* Spacing between lines */
+    margin-top: 50px;
+}
+
+/* 6. Course Section
+============================== */
+
+#courses {
+    background-color: #f7f7f7;
+    /* Light gray background */
+    padding: 50px 0;
+    /* Vertical padding */
+    text-align: center;
+    /* Center the text */
+}
+
+.course-header {
+    font-size: 40px;
+    /* Large font size */
+    color: #333;
+    /* Dark gray text */
+    margin-bottom: 50px;
+    /* Space below the header */
+}
+
+.course-description {
+    font-size: 1.5em;
+    /* Medium font size */
+    color: #333;
+    /* Dark gray text */
+    margin: 250px;
+    margin-bottom: 50px;
+    margin-top: 0px;
+    /* Space below the description */
+}
+
+.course-container {
+    display: grid;
+    /* Use CSS Grid */
+    grid-template-columns: repeat(3, 1fr);
+    /* Create 3 equal-width columns */
+    gap: 20px;
+    /* Space between the grid items */
+    justify-items: center;
+    /* Center the grid items horizontally */
+}
+
+.course-item {
+    background-color: #fff;
+    /* White background */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* Shadow effect */
+    transition: 0.3s;
+    /* Smooth transition */
+    width: 400px;
+    /* Width of the course item */
+    margin: 20px;
+    /* Space around the course item */
+    border-radius: 10px;
+    /* Rounded corners */
+    text-decoration: none;
+    /* Removes underline */
+    color: #333;
+    /* Changes color to dark grey */
+}
+
+.course-name {
+    font-size: 1.5em;
+    /* Medium font size */
+    color: #333;
+    /* Dark gray text */
+    margin: 20px;
+    /* Space around the course name */
+}
+
+/* Course Icons */
+
+/* Use course info to adjust containers if needed */
+
+.course-icon1 {
+    width: 40px;
+    height: auto;
+}
+
+.course-icon2 {
+    width: 45px;
+    height: auto;
+}
+
+.course-icon3 {
+    width: 35px;
+    height: auto;
+}
+
+.course-icon4 {
+    width: 35px;
+    height: auto;
+}
+
+.course-icon5 {
+    width: 35px;
+    height: auto;
+}
+
+.course-icon6 {
+    width: 35px;
+    height: auto;
+}
+
+@media (max-width: 600px) {
+    .course-container {
+       grid-template-columns: 1fr;
+    }
+   }
+
+   @media (max-width: 600px) {
+    .course-description {
+       font-size: 1em;
+       margin: 20px;
+       margin-bottom: 50px;
+    }
+   }
+   
+   
+/* 7. Resources Section
+============================== */
+
+#resources {
+    background-color: #f7f7f7;
+    /* Light gray background */
+    padding: 50px 0;
+    /* Vertical padding */
+    text-align: center;
+    /* Center the text */
+}
+
+.resource-header {
+    font-size: 40px;
+    /* Large font size */
+    color: #333;
+    /* Dark gray text */
+    margin-bottom: 50px;
+    /* Space below the header */
+}
+
+.resource-container {
+    display: grid;
+    /* Use CSS Grid */
+    grid-template-columns: repeat(3, 1fr);
+    /* Create 3 equal-width columns */
+    gap: 20px;
+    /* Space between the grid items */
+    justify-items: center;
+    /* Center the grid items horizontally */
+}
+
+.resource-item {
+    position: relative;
+    /* Position the overlay relative to the image */
+}
+
+.resource-image {
+    width: 100%;
+    /* Full width */
+    height: auto;
+    /* Auto height to maintain aspect ratio */
+    object-fit: cover;
+    /* Cover the entire area of the image */
+    transition: opacity 0.3s;
+    /* Smooth transition */
+}
+
+.resource-overlay {
+    position: absolute;
+    /* Position the overlay absolutely within the image */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent black background */
+    display: flex;
+    /* Use Flexbox */
+    justify-content: center;
+    /* Center the text horizontally */
+    align-items: center;
+    /* Center the text vertically */
+    opacity: 0;
+    /* Initially hidden */
+    transition: opacity 0.3s;
+    /* Smooth transition */
+}
+
+.resource-item:hover .resource-image {
+    opacity: 0.5;
+    /* Reduce opacity when hovered */
+}
+
+.resource-item:hover .resource-overlay {
+    opacity: 1;
+    /* Show the overlay when hovered */
+}
+
+.resource-text {
+    color: #fff;
+    /* White text */
+    font-size: 1.5em;
+    /* Medium font size */
+}
+
+/* 8. Footer Section
+============================== */
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+#ryan-linkedin {
+    color: white;
+}
+
+/* 9. Website Fade-In Section
+============================== */
+
+
+body {
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
+    -moz-animation: fadeIn ease 2s;
+    -o-animation: fadeIn ease 2s;
+    -ms-animation: fadeIn ease 2s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
