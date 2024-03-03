@@ -158,173 +158,7 @@ p {
     /* Reduces the size of the overlay image to 50% of its original size */
 }
 
-/* 4. About Section
-============================== */
-
-#about-us {
-    background-color: white;
-    /* Sets the background color */
-
-    border-top: 2px solid #d2b356;
-    /* Adds a top border to the section */
-    padding-left: 50px;
-    /* Adds a 50px padding from the left side of the screen */
-}
-
-.about-us-header {
-    
-    /* Makes the text bold */
-    color: black;
-    /* Sets the text color */
-    font-size: 40px;
-    /* Sets the font size */
-    margin-bottom: 35px;
-    border-bottom: 1px solid black;
-    margin-left: 50px;
-    margin-right: 100px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.about-background {
-    background-color: white;
-    flex: 1;
-    /* Reduce the flex value to leave room for the text */
-    padding-right: 20px;
-}
-
-.about-us-text {
-    font-size: 18px;
-    /* Sets the font size */
-    line-height: 1.5;
-    /* Sets the line height */
-    color: #666;
-    /* Sets the text color */
-    max-width: 800px;
-    /* Sets the maximum width */
-    padding-top: 5px;
-    /* Adds some space above the text */
-    margin-bottom: 20px;
-    /* Adds some space below the text */
-    padding-left: 50px;
-    /* Adds a 50px padding from the left side of the screen */
-}
-
-.about-picture img {
-    flex: 1;
-    max-width: 100%;
-    height: auto;
-}
-
-@media (max-width: 600px) {
-    .content {
-       flex-direction: column;
-    }
-    .about-background {
-       padding-right: 0;
-    }
-    .about-us-text {
-       font-size: 16px;
-       padding-left: 20px;
-    }
-    .about-picture img {
-       max-width: 100%;
-       height: auto;
-    }
-   }
-   
-
-/* 5. Team Section
-============================== */
-
-#team {
-    background-color: #f7f7f7;
-    /* Light gray background */
-    padding: 50px 0;
-    /* Vertical padding */
-    text-align: center;
-    /* Center the text */
-}
-
-.team-header {
-    font-size: 40px;
-    /* Large font size */
-    color: #333;
-    /* Dark gray text */
-    margin-bottom: 50px;
-    /* Space below the header */
-}
-
-.profile-card {
-    display: inline-block;
-    /* Allows the card to sit side by side with other cards */
-    background-color: #fff;
-    /* White background */
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    /* Shadow effect */
-    transition: 0.3s;
-    /* Smooth transition */
-    width: 50%;
-    /* Width of the card */
-    margin: 10px;
-    /* Space around the card */
-    border: 2px solid transparent;
-    /* Transparent border */
-    padding: 20px;
-}
-
-.profile-card:hover {
-    border: 2px solid #d2b356;
-    /* Golden border on hover */
-}
-
-.profile-pic {
-    border-radius: 50%;
-    /* Circle shape */
-    width: 250px;
-    /* Full width */
-    height: 250px;
-    /* Auto height */
-    position: relative;
-    top: 20px;
-}
-
-.profile-name {
-    font-size: 2em;
-    /* Medium font size */
-    color: #333;
-    /* Dark gray text */
-    margin: 50px 0 20px 0;
-    /* Space above the name, no space below */
-}
-
-.profile-role {
-    font-size: 1.5em;
-    /* Medium font size */
-    color: #333;
-    /* Dark gray text */
-    margin: 10px 0;
-    /* Space above and below the role */
-    font-style: italic;
-}
-
-.profile-bio {
-    font-size: 18px;
-    /* Small font size */
-    color: #666;
-    /* Gray text */
-    line-height: 1.5;
-    /* Spacing between lines */
-    margin-top: 50px;
-}
-
-/* 6. Course Section
+/* 4. Course Section
 ============================== */
 
 #courses {
@@ -350,7 +184,7 @@ p {
     /* Medium font size */
     color: #333;
     /* Dark gray text */
-    margin: 250px;
+    margin: 17%;
     margin-bottom: 50px;
     margin-top: 0px;
     /* Space below the description */
@@ -433,18 +267,192 @@ p {
     .course-container {
        grid-template-columns: 1fr;
     }
-   }
+}
 
-   @media (max-width: 600px) {
+@media (max-width: 600px) {
     .course-description {
-       font-size: 1em;
-       margin: 20px;
-       margin-bottom: 50px;
+        font-size: 1\.5em;
+        margin: 10%;
+        margin-bottom: 50px;
     }
+}
+
+
+/* 5. Team Section
+============================== */
+
+#team {
+    background-color: #f7f7f7;
+    /* Light gray background */
+    padding: 50px 0;
+    /* Vertical padding */
+    text-align: center;
+    /* Center the text */
+}
+
+.team-header {
+    font-size: 40px;
+    /* Large font size */
+    color: #333;
+    /* Dark gray text */
+    margin-bottom: 50px;
+    /* Space below the header */
+}
+
+
+.profile-card {
+    display: inline-block;
+    /* Allows the card to sit side by side with other cards */
+    background-color: #fff;
+    /* White background */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* Shadow effect */
+    transition: 0.3s;
+    /* Smooth transition */
+    width: 50%;
+    /* Width of the card */
+    margin: 10px;
+    /* Space around the card */
+    border: 2px solid transparent;
+    /* Transparent border */
+    padding: 20px;
+}
+
+.profile-card:hover {
+    border: 2px solid #d2b356;
+    /* Golden border on hover */
+}
+
+.profile-pic {
+    border-radius: 50%;
+    /* Circle shape */
+    width: 250px;
+    /* Full width */
+    height: 250px;
+    /* Auto height */
+    position: relative;
+    top: 20px;
+}
+
+.profile-name {
+    font-size: 1.8em;
+    /* Medium font size */
+    color: #333;
+    /* Dark gray text */
+    margin: 50px 0 20px 0;
+    /* Space above the name, no space below */
+}
+
+.profile-role {
+    font-size: 1.5em;
+    /* Medium font size */
+    color: #333;
+    /* Dark gray text */
+    margin: 10px 0;
+    /* Space above and below the role */
+    font-style: italic;
+}
+
+.profile-bio {
+    font-size: 18px;
+    /* Small font size */
+    color: #666;
+    /* Gray text */
+    line-height: 1.5;
+    /* Spacing between lines */
+    margin-top: 50px;
+}
+
+
+
+/* 6. About Section (+ Founder-7)
+============================== */
+
+#about-us,#founder-message {
+    background-color: white;
+    /* Sets the background color */
+
+    border-top: 2px solid #d2b356;
+    /* Adds a top border to the section */
+    padding-left: 50px;
+    /* Adds a 50px padding from the left side of the screen */
+}
+
+.about-us-header, .founder-header {
+    
+    /* Makes the text bold */
+    color: black;
+    /* Sets the text color */
+    font-size: 40px;
+    /* Sets the font size */
+    margin-bottom: 35px;
+    border-bottom: 1px solid black;
+    margin-left: 50px;
+    margin-right: 100px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-background, .founder-background {
+    background-color: white;
+    flex: 1;
+    /* Reduce the flex value to leave room for the text */
+    padding-right: 20px;
+}
+
+.about-us-text, .founder-text{
+    font-size: 18px;
+    /* Sets the font size */
+    line-height: 1.5;
+    /* Sets the line height */
+    color: #666;
+    /* Sets the text color */
+    max-width: 800px;
+    /* Sets the maximum width */
+    padding-top: 5px;
+    /* Adds some space above the text */
+    margin-bottom: 20px;
+    /* Adds some space below the text */
+    padding-left: 50px;
+    /* Adds a 50px padding from the left side of the screen */
+}
+
+.about-picture img {
+    flex: 1;
+    max-width: 50%;
+    height: auto;
+}
+
+@media (max-width: 600px) {
+    .content {
+       flex-direction: column;
+    }
+    .about-background {
+       padding-right: 0;
+    }
+    .about-us-text {
+       font-size: 16px;
+       padding-left: 0px;
+       text-align: center;
+    }
+    .about-picture img {
+       max-width: 50%;
+       height: auto;
+    }
+
    }
    
+/* 7. Founder's Message Section
+============================== */   
+
    
-/* 7. Resources Section
+/* 8. Resources Section
 ============================== */
 
 #resources {
