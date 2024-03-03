@@ -101,6 +101,82 @@ p {
     height: auto;
 }
 
+/*Overlay*/
+
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 0;
+    width: 100%;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-y: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+  
+  /* Position the content inside the overlay */
+  .overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
+  
+  /* The navigation links inside the overlay */
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+
+
+#navButton{
+    width: 30px;
+}
+
+
+
+@media (max-width: 850px) {
+    #nav-list li{
+        display: none;
+    }
+}
+@media (min-width: 851px) {
+    #navButton{
+        display:none;
+    }
+}
 
 
 
@@ -191,14 +267,13 @@ p {
 }
 
 .course-container {
-    display: grid;
-    /* Use CSS Grid */
-    grid-template-columns: repeat(3, 1fr);
-    /* Create 3 equal-width columns */
-    gap: 20px;
-    /* Space between the grid items */
-    justify-items: center;
-    /* Center the grid items horizontally */
+    display: flex;
+    /*Turns courses into flexbox format*/
+    flex-wrap: wrap;
+    /*Allows courses to move underneath if they are going off page*/
+    justify-content: space-evenly;
+    /*Spreads cources to fill horizontal space*/
+    
 }
 
 .course-item {
@@ -233,35 +308,26 @@ p {
 
 /* Use course info to adjust containers if needed */
 
-.course-icon1 {
-    width: 40px;
-    height: auto;
-}
-
-.course-icon2 {
+#course-icon1 {
     width: 45px;
     height: auto;
 }
 
-.course-icon3 {
+#course-icon2 {
     width: 35px;
     height: auto;
 }
 
-.course-icon4 {
+#course-icon3 {
     width: 35px;
     height: auto;
 }
 
-.course-icon5 {
+#course-icon4 {
     width: 35px;
     height: auto;
 }
 
-.course-icon6 {
-    width: 35px;
-    height: auto;
-}
 
 @media (max-width: 600px) {
     .course-container {
@@ -299,6 +365,13 @@ p {
     /* Space below the header */
 }
 
+#team-profiles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
 
 .profile-card {
     display: inline-block;
@@ -309,7 +382,7 @@ p {
     /* Shadow effect */
     transition: 0.3s;
     /* Smooth transition */
-    width: 50%;
+    width: 30%;
     /* Width of the card */
     margin: 10px;
     /* Space around the card */
@@ -363,6 +436,32 @@ p {
     margin-top: 50px;
 }
 
+@media(max-width: 800px){
+    #team-profiles{
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-card{
+        width: 60%;
+    }
+
+    .profile-pic{
+        width: 65%;
+        height: 65%;
+    }
+
+    .profile-name{
+        font-size: 5vw;
+    }
+
+    .profile-role{
+        font-size: 5vw;
+    }
+
+     
+}
 
 
 /* 6. About Section (+ Founder-7)
@@ -424,26 +523,33 @@ p {
 }
 
 .about-picture img {
-    flex: 1;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 1;
     max-width: 50%;
     height: auto;
 }
 
-@media (max-width: 600px) {
+
+@media (max-width: 1100px) {
+    
     .content {
-       flex-direction: column;
+        display: inline;
+
     }
     .about-background {
        padding-right: 0;
     }
-    .about-us-text {
+    .about-us-text, .founder-text {
        font-size: 16px;
        padding-left: 0px;
        text-align: center;
+       width: 90%;
+       margin:auto;
     }
-    .about-picture img {
-       max-width: 50%;
-       height: auto;
+    
+    .content img{
+        display: none;
     }
 
    }

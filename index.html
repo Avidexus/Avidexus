@@ -52,17 +52,47 @@
           <!-- Founders Message-->
           <li><a href="#resources">Resources</a></li>
           <!-- Resources link -->
-        </ul>
+
+          <!--Navigation Button-->
+          <img src="./assets/images/icons/icons8-menu-50.png" onclick="openNav()" id="navButton">
+
+        <!--Navigation menu-->
+        <!-- The overlay -->
+        <div id="myNav" class="overlay">
+
+          <!-- Button to close the overlay navigation -->
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+          <!-- Overlay content -->
+          <div class="overlay-content">
+            <a href="#home">Home</a>
+            <a href="#courses">Courses</a>
+            <a href="#team">Team</a>
+            <a href="#about">About</a>
+            <a href="#founder-message">Founder's Message</a>
+            <a href="#resources">Resources</a>
+          </div>
+
+          <!-- Use any element to open/show the overlay navigation menu -->
+          
+        </div>
+      </ul>
+
+
+
+    </div>
       </div>
     </div>
     <!-- Social Media Icons -->
     <div id="social-media-icons">
-      <a href="#"><img src="./assets/images/social-icons/icons8-instagram-50.png" alt="Instagram" class="social"></a>
-      <a href="#"><img src="./assets/images/social-icons/icons8-linkedin-50.png" alt="LinkedIn" class="social"></a>
-      <a href="#"><img src="./assets/images/social-icons/icons8-whatsapp-50.png" alt="WhatsApp" class="social"></a>
-      <a href="#"><img src="./assets/images/social-icons/icons8-facebook-50.png" alt="Facebook" class="social"></a>
+      <a href="https://www.instagram.com/avidexus?igsh=MTUxY2F2eWJmNGllMA==" target="_blank" rel="noeferrer"><img src="./assets/images/social-icons/icons8-instagram-50.png" alt="Instagram" class="social"></a>
+      <a href="https://www.linkedin.com/company/avidexus/" target="_blank" rel="noeferrer"><img src="./assets/images/social-icons/icons8-linkedin-50.png" alt="LinkedIn" class="social"></a>
+      <a href="#" target="_blank" rel="noeferrer"><img src="./assets/images/social-icons/icons8-whatsapp-50.png" alt="WhatsApp" class="social"></a>
+      <a href="https://www.facebook.com/share/2GzkDWEoTqppdDS6/?mibextid=qi2Omg" target="_blank" rel="noeferrer"><img src="./assets/images/social-icons/icons8-facebook-50.png" alt="Facebook" class="social"></a>
       <!-- Add more icons as needed -->
     </div>
+
+    
   </nav>
   <!-- End of Navigation Bar -->
 
@@ -89,52 +119,38 @@
 
     <!-- All courses -->
     <div class="course-container">
+
       <!-- Course #1 -->
-      <a href="#" class="course-item">
+      <a href="https://www.youtube.com/watch?v=eXiO3Oi_FFU&list=PLWPUEPF2YwuHxPkbHhz0m5TrzFdQHPa90" target="_blank" rel="noeferrer" class="course-item">
         <div class="course-info">
-          <img src="./assets/images/icons/icons8-building-80.png" alt="building" class="course-icon1" />
-          <h2 class="course-name">Applied Mathematics B 124</h2>
+          <img src="./assets/images/icons/icons8-calculator-50.png" alt="calculator" id="course-icon1" />
         </div>
+        <h2 class="course-name">Engineering Mathematics 214</h2>
       </a>
 
       <!-- Course #2 -->
-      <a href="#" class="course-item">
+      <a href="https://www.youtube.com/watch?v=0elZPQUXnwo&list=PLWPUEPF2YwuHvxT4OVyhS91ac7JRMbc7Q" target="_blank" rel="noeferrer" class="course-item">
         <div class="course-info">
-          <img src="./assets/images/icons/icons8-calculator-50.png" alt="calculator" class="course-icon2" />
+          <img src="./assets/images/icons/icons8-rocket-50.png" alt="rocket" id="course-icon2" />
         </div>
-        <h2 class="course-name">Engineering Mathematics 115</h2>
+        <h2 class="course-name">Applied Mathematics B 224</h2>
       </a>
 
       <!-- Course #3 -->
-      <a href="#" class="course-item">
+      <a href="https://www.youtube.com/watch?v=UnSm2TlYX6I&list=PLWPUEPF2YwuHmiP4CWaz0FLdr6V-84B1A" target="_blank" rel="noeferrer" class="course-item">
         <div class="course-info">
-          <img src="./assets/images/icons/icons8-steel-i-beam-50.png" alt="I-beam" class="course-icon3" />
+          <img src="./assets/images/icons/icons8-electric-circuit-60.png" alt="electric circuit" id="course-icon3" />
         </div>
-        <h2 class="course-name">Strength of Materials 143</h2>
+        <h2 class="course-name">Electro-techniques 214</h2>
       </a>
 
       <!-- Course #4 -->
-      <a href="#" class="course-item">
-        <div class="course-info">
-          <img src="./assets/images/icons/icons8-rocket-50.png" alt="rocket" class="course-icon4" />
+      <a href="#" class="course-item" class="coming-soon">
+        <div class="course-info" >
+          <!--<img src="./assets/images/icons/" alt="" id="course-icon4" />-->
+          <p style="color:red">Coming Soon!</p>
         </div>
-        <h2 class="course-name">Applied Mathematics B 154</h2>
-      </a>
-
-      <!-- Course #5 -->
-      <a href="#" class="course-item">
-        <div class="course-info">
-          <img src="./assets/images/icons/icons8-math-64.png" alt="math block" class="course-icon5" />
-        </div>
-        <h2 class="course-name">Engineering Mathematics 145</h2>
-      </a>
-
-      <!-- Course #6 -->
-      <a href="#" class="course-item">
-        <div class="course-info">
-          <img src="./assets/images/icons/icons8-electric-circuit-60.png" alt="electric circuit" class="course-icon6" />
-        </div>
-        <h2 class="course-name">Electrotechnique 143</h2>
+        <h2 class="course-name">Thermodynamics 224</h2>
       </a>
 
       <!-- Add more courses as needed -->
@@ -147,37 +163,38 @@
    <!-- Team Section -->
    <section id="team">
     <p class="team-header">Our Team</p>
-    <div class="profile-card">
-      <img src="./assets/images/team-photo/RyanShepherd.jpg" alt="Ryan Shepherd Photo" class="profile-pic" />
-      <h2 class="profile-name">Ryan Shepherd</h2>
-      <p class="profile-role">Founder</p>
-      
-      <!--
-      <p class="profile-bio">
-        Possible Bio
-      </p>
-      -->
+    <div id="team-profiles">
+      <div class="profile-card">
+        <img src="./assets/images/team-photo/RyanShepherd.jpg" alt="Ryan Shepherd Photo" class="profile-pic" />
+        <h2 class="profile-name">Ryan Shepherd</h2>
+        <p class="profile-role">Founder</p>
+        
+        <!--
+        <p class="profile-bio">
+          Possible Bio
+        </p>
+        -->
 
+      </div>
+
+      <div class="profile-card">
+        <img src="./assets/images/team-photo/RyanShepherd.jpg" alt="Kennard Ward Photo" class="profile-pic" />
+        <h2 class="profile-name">Kennard Ward</h2>
+        <p class="profile-role">Tutor</p>
+      </div>
+
+      <div class="profile-card">
+        <img src="./assets/images/team-photo/BenTerry.jpeg" alt="Ben Photo" class="profile-pic" />
+        <h2 class="profile-name">Ben Terry</h2>
+        <p class="profile-role">Tutor</p>
+      </div>
+
+      <div class="profile-card">
+        <img src="./assets/images/team-photo/RyanShepherd.jpg" alt="Christopher Plotz Photo" class="profile-pic" />
+        <h2 class="profile-name">Christopher Plotz</h2>
+        <p class="profile-role">Web-developer</p>
+      </div>
     </div>
-
-    <div class="profile-card">
-      <img src="./assets/images/team-photo/RyanShepherd.jpg" alt="Kennard Ward Photo" class="profile-pic" />
-      <h2 class="profile-name">Kennard Ward</h2>
-      <p class="profile-role">Tutor</p>
-    </div>
-
-    <div class="profile-card">
-      <img src="./assets/images/team-photo/RyanShepherd.jpg" alt="Ben Photo" class="profile-pic" />
-      <h2 class="profile-name">Ben</h2>
-      <p class="profile-role">Tutor</p>
-    </div>
-
-    <div class="profile-card">
-      <img src="./assets/images/team-photo/RyanShepherd.jpg" alt="Christopher Plotz Photo" class="profile-pic" />
-      <h2 class="profile-name">Christopher Plotz</h2>
-      <p class="profile-role">Web-developer</p>
-    </div>
-
     
   </section>
   <!-- End of Team Section -->
@@ -324,7 +341,7 @@
     <!-- All resources -->
     <div class="resource-container">
       <!-- Resource #1 -->
-      <a href="https://youtu.be/A7MxZGXquA4?si=coJPhmFJsJmQKSVI" class="resource-item">
+      <a href="https://youtu.be/A7MxZGXquA4?si=coJPhmFJsJmQKSVI" target="_blank" rel="noeferrer" class="resource-item">
         <img src="./assets/images/gallery-images/film.jpg" alt="Film" class="resource-image">
         <div class="resource-overlay">
           <p class="resource-text">Discipline</p>
@@ -332,8 +349,7 @@
       </a>
 
       <!-- Resource #2 -->
-      <a href="https://www.youtube.com/watch?v=5HINgMMTzPE&pp=ygUYYW5kcmV3IGh1YmVybWFuIHBvbW9kb3Jv"
-        class="resource-item">
+      <a href="https://www.youtube.com/watch?v=5HINgMMTzPE&pp=ygUYYW5kcmV3IGh1YmVybWFuIHBvbW9kb3Jv" target="_blank" rel="noeferrer" class="resource-item">
         <img src="./assets/images/gallery-images/lecture.jpg" alt="Lecturer" class="resource-image">
         <div class="resource-overlay">
           <p class="resource-text">Huberman Lab</p>
@@ -341,7 +357,7 @@
       </a>
 
       <!-- Resource #3 -->
-      <a href="./assets/documents/Avidexus Cornell Template.docx" class="resource-item">
+      <a href="./assets/documents/Avidexus Cornell Template.docx" target="_blank" rel="noeferrer" class="resource-item">
         <img src="./assets/images/gallery-images/notebook.jpg" alt="Notebook" class="resource-image">
         <div class="resource-overlay">
           <p class="resource-text">Cornell Notes</p>
@@ -349,7 +365,7 @@
       </a>
 
       <!-- Resource #4 -->
-      <a href="https://www.youtube.com/live/7NOSDKb0HlU?si=f467QHFya5YtB5XP" class="resource-item">
+      <a href="https://www.youtube.com/live/7NOSDKb0HlU?si=f467QHFya5YtB5XP" target="_blank" rel="noeferrer" class="resource-item">
         <img src="./assets/images/gallery-images/headphones.jpg" alt="Headphones" class="resource-image">
         <div class="resource-overlay">
           <p class="resource-text">Lofi Music</p>
@@ -357,7 +373,7 @@
       </a>
 
       <!-- Resource #5 -->
-      <a href="#" class="resource-item">
+      <a href="#" class="resource-item" target="_blank" rel="noeferrer">
         <img src="./assets/images/gallery-images/bookcase.jpg" alt="Library" class="resource-image">
         <div class="resource-overlay">
           <p class="resource-text">Study Tips</p>
@@ -365,7 +381,7 @@
       </a>
 
       <!-- Resource #6 -->
-      <a href="https://pomofocus.io/" class="resource-item">
+      <a href="https://pomofocus.io/" class="resource-item" target="_blank" rel="noeferrer">
         <img src="./assets/images/gallery-images/clock.jpg" alt="Clock" class="resource-image">
         <div class="resource-overlay">
           <p class="resource-text">Pomodoro Timer</p>
@@ -382,7 +398,7 @@
   <!-- Footer -->
   <footer>
     <p>&copy; 2024. Coded by <a href="https://www.linkedin.com/in/ryanshepherd2002/" id="ryan-linkedin">Ryan
-        Shepherd</a>. Icons by Icons8.
+        Shepherd</a>and Christopher Plotz. Icons by Icons8.
     </p>
   </footer>
   <!-- End of Footer -->
