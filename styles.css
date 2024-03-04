@@ -52,7 +52,7 @@ p {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     background-color: #f7f7f7;
     color: #333;
     padding: 15px;
@@ -132,7 +132,7 @@ p {
     padding: 8px;
     text-decoration: none;
     font-size: 36px;
-    color: #818181;
+    color: #eae7e7;
     display: block; /* Display block instead of inline */
     transition: 0.3s; /* Transition effects on hover (color) */
   }
