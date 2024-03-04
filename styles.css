@@ -167,12 +167,12 @@ p {
 
 
 
-@media (max-width: 850px) {
+@media (max-width: 750px) {
     #nav-list li{
         display: none;
     }
 }
-@media (min-width: 851px) {
+@media (min-width: 751px) {
     #navButton{
         display:none;
     }
@@ -213,7 +213,7 @@ p {
     /* Takes up the full width */
     height: 100px;
     /* Takes up the full height */
-    background-image: url("./assets/images/logo/nAvidexus\ PNG.png-HD.png");
+    background-image: url("./assets/images/logo/nAvidexus.png");
     /* Replace with the path to your overlay image */
     background-size: contain;
     /* Scales the image to fit within the content area */
@@ -467,7 +467,7 @@ p {
 /* 6. About Section (+ Founder-7)
 ============================== */
 
-#about-us,#founder-message {
+#about-us /*,#founder-message */{
     background-color: white;
     /* Sets the background color */
 
@@ -477,7 +477,7 @@ p {
     /* Adds a 50px padding from the left side of the screen */
 }
 
-.about-us-header, .founder-header {
+.about-us-header /*, .founder-header*/ {
     
     /* Makes the text bold */
     color: black;
@@ -498,14 +498,14 @@ p {
     align-items: center;
 }
 
-.about-background, .founder-background {
+.about-background /*, .founder-background */ {
     background-color: white;
     flex: 1;
     /* Reduce the flex value to leave room for the text */
     padding-right: 20px;
 }
 
-.about-us-text, .founder-text{
+.about-us-text /*, .founder-text */{
     font-size: 18px;
     /* Sets the font size */
     line-height: 1.5;
@@ -540,7 +540,7 @@ p {
     .about-background {
        padding-right: 0;
     }
-    .about-us-text, .founder-text {
+    .about-us-text/*, .founder-text*/ {
        font-size: 16px;
        padding-left: 0px;
        text-align: center;
@@ -556,6 +556,79 @@ p {
    
 /* 7. Founder's Message Section
 ============================== */   
+
+#founder-message {
+    background-color: white;
+    /* Sets the background color */
+
+    border-top: 2px solid #d2b356;
+    /* Adds a top border to the section */
+}
+
+.founder-header{
+    
+    /* Makes the text bold */
+    color: black;
+    /* Sets the text color */
+    font-size: 40px;
+    /* Sets the font size */
+    margin-bottom: 35px;
+    border-bottom: 1px solid black;
+    margin-left: 50px;
+    margin-right: 100px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.founder-text {
+    font-size: 18px;
+    /* Small font size */
+    color: #666;
+    /* Gray text */
+    line-height: 1.5;
+    /* Spacing between lines */
+    margin-top: 50px;
+}
+
+.founder-text {
+    display: inline-block;
+    /* Allows the card to sit side by side with other cards */
+    background-color: #fff;
+    /* White background */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* Shadow effect */
+    transition: 0.3s;
+    /* Smooth transition */
+    width: 80%;
+    /* Width of the card */
+    margin: 10%;
+    /* Space around the card */
+    margin-top: 10px;
+    margin-bottom: 5px;
+
+    border: 2px solid transparent;
+    /* Transparent border */
+    padding: 2%;
+    
+    
+    text-align: center;
+}
+
+.founder-text{
+    border: 2px solid #d2b356;
+    /* Golden border on hover */
+}
+
+@media (min-width: 1100px) {
+    .founder-text{
+        width: 60%;
+        margin: 20%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+
 
    
 /* 8. Resources Section
@@ -654,7 +727,7 @@ footer {
     padding: 10px 0;
 }
 
-#ryan-linkedin {
+.linkedin {
     color: white;
 }
 
