@@ -217,7 +217,7 @@ p {
     /* Replace with the path to your overlay image */
     background-size: contain;
     /* Scales the image to fit within the content area */
-    background-position: center left;
+    background-position: center;
     /* Centers the image */
     background-repeat: no-repeat;
     /* Prevents the image from repeating */
@@ -233,6 +233,19 @@ p {
     background-size: 50%;
     /* Reduces the size of the overlay image to 50% of its original size */
 }
+
+@media (max-width: 768px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+
+@media (max-width: 768px) {
+    .parallax::before{
+        display: none;
+    }
+}
+        
 
 /* 4. Course Section
 ============================== */
