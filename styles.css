@@ -4,12 +4,14 @@
 1. Body
 2. Navigation Bar
 3. Homepage Background
-4. About Section
+4. Courses Section
 5. Team Section
-6. Courses Section
-7. Resources Section
-8. Footer Section
-9. Website Fade-In Section */
+6. About Section
+7. Founder's Message Section
+8. Companies Section
+9. Resources Section
+10. Footer Section
+11. Website Fade-In Section */
 
 html {
     scroll-behavior: smooth;
@@ -25,8 +27,6 @@ body {
     /* Removes default padding */
     font-family: Arial, sans-serif;
     /* Sets the font family */
-    overflow-x: hidden;
-    /* Prevents horizontal scrolling */
 }
 
 body,
@@ -35,12 +35,30 @@ html {
     /* Sets the width to 100% of the viewport */
     height: 100%;
     /* Sets the height to 100% of the viewport */
+    overflow-x: hidden;
+    /* Prevents horizontal scrolling */
 }
 
 /* Paragraph Styling */
 p {
     font-family: "Didact Gothic", sans-serif;
 }
+
+h1{
+    font-weight: 100;
+    font-family: "Didact Gothic", sans-serif;
+}
+
+.header{
+    font-size: 40px;
+    color: black;
+    margin-bottom: 50px;
+    /* Space below the header */
+    border-bottom: 1px solid black;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
 
 /* 2. Navigation Bar
 ==============================*/
@@ -53,6 +71,7 @@ p {
     top: 0;
     left: 0;
     width: 100%;
+    max-height: 50px;
     background-color: #f7f7f7;
     color: #333;
     padding: 15px;
@@ -167,12 +186,12 @@ p {
 
 
 
-@media (max-width: 750px) {
+@media (max-width: 838px) {
     #nav-list li{
         display: none;
     }
 }
-@media (min-width: 751px) {
+@media (min-width: 838px) {
     #navButton{
         display:none;
     }
@@ -200,52 +219,39 @@ p {
     height: 100%;
 }
 
-/* Parallax Overlay */
-.parallax::before {
-    content: "";
-    /* Required for the pseudo-element to work */
-    position: absolute;
-    /* Positions the pseudo-element relative to the nearest positioned ancestor */
-    top: 0;
-    /* Starts from the top */
-    left: 50px;
-    /* Starts from the left */
+#nAvidexus{
+    position: relative;
+    
+    top: 220px;
+    left: 5%;
     width: 400px;
-    /* Takes up the full width */
-    height: 100px;
-    /* Takes up the full height */
-    background-image: url("./assets/images/logo/nAvidexus.png");
-    /* Replace with the path to your overlay image */
-    background-size: contain;
-    /* Scales the image to fit within the content area */
-    background-position: center;
-    /* Centers the image */
-    background-repeat: no-repeat;
-    /* Prevents the image from repeating */
-    opacity: 1;
-    /* Adjust as needed */
-    z-index: 1;
-    /* Ensures the image is on top of the background */
-    top: 200px;
+    height: auto;
+
 }
 
-.parallax .overlay {
-    /* ...other styles... */
-    background-size: 50%;
-    /* Reduces the size of the overlay image to 50% of its original size */
+@media (max-width:900px){
+    #nAvidexus{
+        left: 4%;
+    }
 }
-
-@media (max-width: 768px) {
-    .parallax {
-        background-attachment: scroll;
+@media (max-width:850px){
+    #nAvidexus{
+        left: 3%;
+    }
+}
+@media (max-width:800px){
+    #nAvidexus{
+        left: 2%;
     }
 }
 
-@media (max-width: 768px) {
-    .parallax::before{
+@media (max-width:750px){
+    #nAvidexus{
         display: none;
     }
 }
+
+
         
 
 /* 4. Course Section
@@ -258,15 +264,14 @@ p {
     /* Vertical padding */
     text-align: center;
     /* Center the text */
+    border-bottom: 2px solid #d2b356;
+    /* Adds a top border to the section */
 }
 
-.course-header {
-    font-size: 40px;
-    /* Large font size */
-    color: #333;
-    /* Dark gray text */
-    margin-bottom: 50px;
-    /* Space below the header */
+
+#course-header {
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 .course-description {
@@ -279,6 +284,8 @@ p {
     margin-top: 0px;
     /* Space below the description */
 }
+
+
 
 .course-container {
     display: flex;
@@ -316,6 +323,11 @@ p {
     /* Dark gray text */
     margin: 20px;
     /* Space around the course name */
+    margin-top: 5px;
+}
+
+.course-info{
+    margin-top: 10px;
 }
 
 /* Course Icons */
@@ -333,12 +345,12 @@ p {
 }
 
 #course-icon3 {
-    width: 35px;
+    width: 45px;
     height: auto;
 }
 
 #course-icon4 {
-    width: 35px;
+    width: 45px;
     height: auto;
 }
 
@@ -370,13 +382,9 @@ p {
     /* Center the text */
 }
 
-.team-header {
-    font-size: 40px;
-    /* Large font size */
-    color: #333;
-    /* Dark gray text */
-    margin-bottom: 50px;
-    /* Space below the header */
+#team-header {
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 #team-profiles{
@@ -462,8 +470,8 @@ p {
     }
 
     .profile-pic{
-        width: 65%;
-        height: 65%;
+        width: 80%;
+        height: 80%;
     }
 
     .profile-name{
@@ -478,30 +486,20 @@ p {
 }
 
 
-/* 6. About Section (+ Founder-7)
+/* 6. About Section
 ============================== */
 
-#about-us /*,#founder-message */{
+#about-us{
     background-color: white;
     /* Sets the background color */
-
     border-top: 2px solid #d2b356;
     /* Adds a top border to the section */
-    padding-left: 50px;
-    /* Adds a 50px padding from the left side of the screen */
+    padding: 50px 0;
 }
 
-.about-us-header /*, .founder-header*/ {
+#about-us-header{
     
-    /* Makes the text bold */
-    color: black;
-    /* Sets the text color */
-    font-size: 40px;
-    /* Sets the font size */
-    margin-bottom: 35px;
-    border-bottom: 1px solid black;
-    margin-left: 50px;
-    margin-right: 100px;
+    margin-left: 100px;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -512,14 +510,14 @@ p {
     align-items: center;
 }
 
-.about-background /*, .founder-background */ {
+.about-background{
     background-color: white;
     flex: 1;
     /* Reduce the flex value to leave room for the text */
     padding-right: 20px;
 }
 
-.about-us-text /*, .founder-text */{
+.about-us-text{
     font-size: 18px;
     /* Sets the font size */
     line-height: 1.5;
@@ -530,9 +528,9 @@ p {
     /* Sets the maximum width */
     padding-top: 5px;
     /* Adds some space above the text */
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     /* Adds some space below the text */
-    padding-left: 50px;
+    padding-left: 100px;
     /* Adds a 50px padding from the left side of the screen */
 }
 
@@ -554,8 +552,15 @@ p {
     .about-background {
        padding-right: 0;
     }
-    .about-us-text/*, .founder-text*/ {
-       font-size: 16px;
+
+    #about-us-header{
+        padding: 0;
+        text-align: center;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    .about-us-text{
        padding-left: 0px;
        text-align: center;
        width: 90%;
@@ -574,78 +579,129 @@ p {
 #founder-message {
     background-color: white;
     /* Sets the background color */
-
     border-top: 2px solid #d2b356;
     /* Adds a top border to the section */
+    padding: 70px 0;
 }
 
-.founder-header{
+#founder{
+    text-align: center;
     
-    /* Makes the text bold */
-    color: black;
-    /* Sets the text color */
-    font-size: 40px;
-    /* Sets the font size */
-    margin-bottom: 35px;
-    border-bottom: 1px solid black;
-    margin-left: 50px;
-    margin-right: 100px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+}
+
+
+
+#founder-header{
+    margin: 10px 20%;
+    margin-bottom: 30px;
 }
 
 .founder-text {
+    display: block;
+    background-color: #fff;
+    /* White background */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* Shadow effect */
+
+    width: 80%;
+    margin:auto;
+    
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding: 2%;
+
+    border: 2px solid transparent;
+    /* Transparent border */
     font-size: 18px;
     /* Small font size */
     color: #666;
     /* Gray text */
     line-height: 1.5;
     /* Spacing between lines */
-    margin-top: 50px;
-}
 
-.founder-text {
-    display: inline-block;
-    /* Allows the card to sit side by side with other cards */
-    background-color: #fff;
-    /* White background */
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    /* Shadow effect */
-    transition: 0.3s;
-    /* Smooth transition */
-    width: 80%;
-    /* Width of the card */
-    margin: 10%;
-    /* Space around the card */
-    margin-top: 10px;
-    margin-bottom: 5px;
-
-    border: 2px solid transparent;
-    /* Transparent border */
-    padding: 2%;
-    
-    
+    border: 2px solid #d2b356;
     text-align: center;
 }
 
-.founder-text{
-    border: 2px solid #d2b356;
-    /* Golden border on hover */
-}
 
 @media (min-width: 1100px) {
     .founder-text{
         width: 60%;
-        margin: 20%;
+        margin: auto;
         margin-top: 10px;
         margin-bottom: 10px;
     }
 }
 
+@media (max-width: 708px){
+    #founder-message{
+        padding-top: 80px;
+    }
+}
+
+
+
+/* 8. Companies Section
+============================== */
+
+#sponsor{
+    background-color: white;
+    padding: 50px;
+    text-align: center;
+    border-top: 2px solid #d2b356;
+}
+
+
+
+.sponsor-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 15px;
+}
+
+.sponsor-item {
+    position: relative;
+    /* Position the overlay relative to the image */
+    text-decoration: none;
+    border-radius: 20px;
+
+}
+
+.sponsor-overlay {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+
+.sponsor-text {
+    color: black;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#sponsor-1{
+    flex: 30%;
+    max-height: 150px;
+}
+
+#sponsor-2{
+    flex: 35%;
+    max-height: 150px;
+}
+
+#sponsor-3{
+    flex: 35%;
+    max-height: 150px;
+    max-width: 90%;
+}
+
 
 
    
-/* 8. Resources Section
+/* 9. Resources Section
 ============================== */
 
 #resources {
@@ -655,16 +711,10 @@ p {
     /* Vertical padding */
     text-align: center;
     /* Center the text */
+    border-top: 2px solid #d2b356;
+    /* Adds a top border to the section */
 }
 
-.resource-header {
-    font-size: 40px;
-    /* Large font size */
-    color: #333;
-    /* Dark gray text */
-    margin-bottom: 50px;
-    /* Space below the header */
-}
 
 .resource-container {
     display: grid;
@@ -689,8 +739,6 @@ p {
     /* Auto height to maintain aspect ratio */
     object-fit: cover;
     /* Cover the entire area of the image */
-    transition: opacity 0.3s;
-    /* Smooth transition */
 }
 
 .resource-overlay {
@@ -710,8 +758,6 @@ p {
     /* Center the text vertically */
     opacity: 0;
     /* Initially hidden */
-    transition: opacity 0.3s;
-    /* Smooth transition */
 }
 
 .resource-item:hover .resource-image {
@@ -731,7 +777,7 @@ p {
     /* Medium font size */
 }
 
-/* 8. Footer Section
+/* 10. Footer Section
 ============================== */
 
 footer {
@@ -745,7 +791,7 @@ footer {
     color: white;
 }
 
-/* 9. Website Fade-In Section
+/* 11. Website Fade-In Section
 ============================== */
 
 

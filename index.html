@@ -26,12 +26,11 @@
 
 
   <!-- Homepage Background -->
-
+  
   <section class="parallax" id="home">
-    <div class="overlay" >
-    </div>
+    <img src="./assets/images/logo/nAvidexus.png" id="nAvidexus" alt="Avidexus">
   </section>
-
+  
   <!-- End of Homepage Background -->
 
 
@@ -47,10 +46,12 @@
           <!-- Courses link -->
           <li><a href="#team">Team</a></li>
           <!-- Team link -->
-          <li><a href="#about">About</a></li>
+          <li><a href="#about-us">About</a></li>
           <!-- About link -->
           <li><a href="#founder-message">Founder's Message</a></li>
           <!-- Founders Message-->
+          <li><a href="#companies">Companies</a></li>
+          <!-- Companies link -->
           <li><a href="#resources">Resources</a></li>
           <!-- Resources link -->
 
@@ -59,18 +60,19 @@
 
         <!--Navigation menu-->
         <!-- The overlay -->
-        <div id="myNav" class="overlay">
+        <div id="myNav" class="overlay" onclick="closeNav()">
 
           <!-- Button to close the overlay navigation -->
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="javascript:void(0)" class="closebtn">&times;</a>
 
           <!-- Overlay content -->
           <div class="overlay-content">
             <a href="#home">Home</a>
             <a href="#courses">Courses</a>
             <a href="#team">Team</a>
-            <a href="#about">About</a>
+            <a href="#about-us">About</a>
             <a href="#founder-message">Founder's Message</a>
+            <a href="#companies">Companies</a>
             <a href="#resources">Resources</a>
           </div>
 
@@ -97,10 +99,10 @@
   </nav>
   <!-- End of Navigation Bar -->
 
-
+  
   <!-- Courses Section -->
   <section id="courses">
-    <p class="course-header">Courses</p>
+    <h1 id="course-header" class="header">Courses</h1>
     <p class="course-description">
       Our team has diligently curated an extensive collection of questions and answers, encompassing a wide range of
       modules and topics. These questions have been carefully crafted to not only evaluate your understanding but also
@@ -146,10 +148,9 @@
       </a>
 
       <!-- Course #4 -->
-      <a href="#" class="course-item" class="coming-soon">
+      <a href="https://www.youtube.com/watch?v=kHmqngFp6i4&list=PLWPUEPF2YwuHxTTIyYADemqzJgWhgl29H" target="_blank" rel="noeferrer" class="course-item" class="coming-soon">
         <div class="course-info" >
-          <!--<img src="./assets/images/icons/" alt="" id="course-icon4" />-->
-          <p style="color:red">Coming Soon!</p>
+          <img src="./assets/images/icons/icons8-thermodynamics.png" alt="" id="course-icon4" />
         </div>
         <h2 class="course-name">Thermodynamics 224</h2>
       </a>
@@ -161,9 +162,9 @@
 
 
 
-   <!-- Team Section -->
-   <section id="team">
-    <p class="team-header">Our Team</p>
+  <!-- Team Section -->
+  <section id="team">
+    <h1 id="team-header" class="header">Our Team</h1>
     <div id="team-profiles">
       <div class="profile-card">
         <img src="./assets/images/team-photo/RyanShepherd.jpg" alt="Ryan Shepherd Photo" class="profile-pic" />
@@ -185,13 +186,13 @@
       </div>
 
       <div class="profile-card">
-        <img src="./assets/images/team-photo/BenTerry.jpeg" alt="Ben Photo" class="profile-pic" />
+        <img src="./assets/images/team-photo/BenTerry.jpg" alt="Ben Photo" class="profile-pic" />
         <h2 class="profile-name">Ben Terry</h2>
         <p class="profile-role">Tutor</p>
       </div>
 
       <div class="profile-card">
-        <img src="./assets/images/team-photo/ChristopherPlotz.jpeg" alt="Christopher Plotz Photo" class="profile-pic" />
+        <img src="./assets/images/team-photo/ChristopherPlotz.jpg" alt="Christopher Plotz Photo" class="profile-pic" />
         <h2 class="profile-name">Christopher Plotz</h2>
         <p class="profile-role">Web-developer</p>
       </div>
@@ -209,7 +210,7 @@
     <!-- Content -->
     <div class="content" id="about">
       <div class="about-background">
-        <p class="about-us-header">About</p>
+        <h1 id="about-us-header" class="header">About</h1>
 
         <div class="about-us-text">
 
@@ -275,7 +276,7 @@
     <!-- Content -->
     <div class="content" id="founder">
       <div class="founder-background">
-        <p class="founder-header">Founder's Message</p>
+        <h1 id="founder-header" class="header">Founder's Message</h1>
 
         <div class="founder-text">
 
@@ -335,9 +336,51 @@
 
 
 
+  <!-- Companies Section-->
+  <section id="companies">
+
+    <div id="sponsor">
+      <h1 id="sponsor-heading" class="header">Our Sponsors</h1>
+
+      <div class="sponsor-container">
+
+        <!--Sponsors go here-->
+        <!--NFC-->
+        <a href="" class="sponsor-item">
+          <img src="./assets/images/Sponsors/NFC_Logo.jpg" alt="NFC Logo" class="sponsor-image" id="sponsor-1">
+          <div class="sponsor-overlay">
+            <p class="sponsor-text">National Fluid Control</p>
+          </div>
+        </a>
+
+        <!--SoilTechnix-->
+        <a href="https://za.linkedin.com/company/soiltecnix" target="_blank" rel="noeferrer" class="sponsor-item">
+          <img src="./assets/images/Sponsors/Soiltecnix_Logo.jpg" alt="SoilTecnix Logo" class="sponsor-image" id="sponsor-2">
+          <div class="sponsor-overlay">
+            <p class="sponsor-text">SoilTecnix</p>
+          </div>
+        </a>
+
+        <!--DIMD-->
+        <a href="https://www.facebook.com/dimdservices?mibextid=ZbWKwL" target="_blank" rel="noeferrer" class="sponsor-item">
+          <img src="./assets/images/Sponsors/DIMD_Logo.png" alt="DIMID Logo" class="sponsor-image" id="sponsor-3">
+          <div class="sponsor-overlay">
+            <p class="sponsor-text">Dimd Services</p>
+          </div>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+  <!-- End of Companies Section-->
+
+
+
   <!-- Resources Section -->
   <section id="resources">
-    <p class="resource-header">Resources</p>
+    <h1 id="resource-header" class="header">Resources</h1>
 
     <!-- All resources -->
     <div class="resource-container">
