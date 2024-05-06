@@ -442,6 +442,16 @@ h1{
     font-style: italic;
 }
 
+.multi-role{
+    font-size: 1.3em;
+    /* Medium font size */
+    color: #333;
+    /* Dark gray text */
+    margin: 10px 0;
+    /* Space above and below the role */
+    font-style: italic;
+}
+
 .profile-bio {
     font-size: 18px;
     /* Small font size */
@@ -476,6 +486,10 @@ h1{
         font-size: 5vw;
     }
 
+    .multi-role{
+        font-size: 4vw;
+        /* Decreases size of font for members with multiple roles*/
+    }
      
 }
 
